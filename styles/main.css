@@ -134,17 +134,24 @@ article h3 {
 	padding-bottom: .25em;
 }
 article img {
+	transition: 3s;
+	transform-origin: top left:
 	float: right;
 	margin: .5em 0 1em 1em;
 	border: 1px solid black;
 }
+article img:hover {
+	transform: rotate(720deg)
+}
 
 /* the styles for the aside */
 aside {
+	
 	width: 215px;
 	float: right;
 	padding: 0 0 20px 20px;
 }
+
 aside h2 {
 	color: #800000;
 	font-size: 130%;
@@ -156,7 +163,19 @@ aside h3 {
 	padding-bottom: .25em;
 }
 aside img {
+	animation: animate-aside 3s ease-in-out 2s 2 alternate;
+	transition: 2s;
 	padding-bottom: 1em;
+}
+aside img:hover {
+	transform: translate(100px, 20px);
+}
+@keyframes animate-aside {
+	0% {transform: translate(0,0) scale(1);
+	}
+	100% {
+		transform: translate(100px, 20px) scale(1.4;)
+	}
 }
 
 /* the styles for the footer */
